@@ -1,0 +1,84 @@
+#section2 {
+  position: relative;
+  z-index: 5;
+  /*background-image: url('../img/backgrounds/cafe-restoration.jpg');
+  background-size: cover;
+  background-position: 50%;*/
+  
+  &:before {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    content: "";
+    background-image: url('../img/backgrounds/services-bg.jpg');
+    background-size: cover;
+    background-position: 50%;
+    opacity: 0.5;
+    z-index: -5;
+  }
+
+  &:after {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    content: ""; // background-image: url("../img/backgrounds/banner_home_overlay.png");
+    background-color: #000000;
+    /*background-image: url("https://www.transparenttextures.com/patterns/grid-me.png");*/
+    background-size: 1%;
+    background-position: center;
+    opacity: 0.9;
+    z-index: -2;
+  }
+  .container--services{
+    h2,h4 {
+      color: white;
+      border-left-color: white;
+      margin-bottom: 0.5em;
+    }
+
+    p {
+      display: block;
+      width: 100%;
+      color: white;
+      font-size: 18px;
+      margin: 2.5em 0;
+    }  
+    ul{
+      color: white;
+      font-size: 18px;
+      display:block;
+      width:100%;
+      margin: 1em 0 ;
+
+      li{
+        margin: 0.5em 0;
+        width:50%;
+        display:block;
+        float:left;
+        padding-left: 1.5em;
+        position:relative;
+        @include mobile {
+          width: 100%;
+        }
+        &:before {
+          display:block;
+          position:absolute;
+          top: 50%;
+          left: 0;
+          transform: translateY(-50%);
+          content:"";
+          height: 8px;
+          width:8px;
+          background: $teal;
+        }
+      }
+    }
+  }
+}
+

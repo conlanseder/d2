@@ -1,0 +1,67 @@
+.split-vert {
+  display: flex;
+  width: 100%;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+
+#section3 {
+  position: relative;
+  z-index: 5;
+  /*background-image: url('../img/backgrounds/cafe-restoration.jpg');
+  background-size: cover;
+  background-position: 50%;*/
+  background-color: black;
+  
+}
+
+.container--clients {
+  h2 {
+    color: white;
+    border-left-color: white;
+    margin-bottom: 0.5em;
+  }
+
+  p {
+    display: block;
+    width: 100%;
+    color: white;
+    //text-align: center;
+  }
+}
+
+.logos-container {
+  display: flex;
+  width: 100%;
+  max-width: 100%;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+
+  .logo {
+
+    height: 100%;
+    width: calc(100% / 4);
+    //min-width: 150px;
+    display: block;
+    @include mobile {
+      width: calc(100% / 2);
+    }
+    .img-container {
+      display: block;
+      width: 100%;
+      height: auto;
+      max-width: 225px;
+      min-width: 150px;
+      margin: 0 auto;
+
+      img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        display: block;
+        
+      }
+    }
+  }
+}

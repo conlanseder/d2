@@ -1,0 +1,60 @@
+@import url( 'https://fonts.googleapis.com/css?family=Open+Sans:400,700|Oswald:400,700');
+$font-heading: 'Oswald', sans-serif;
+$font-body: 'Open Sans', sans-serif;
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  display: block;
+  width: 100%;
+  font-family: $font-heading;
+  color: $black;
+}
+
+a,
+p,
+ul {
+  display: block;
+  font-family: $font-body;
+  color: $black;
+}
+
+h1 {
+  font-size: 56px;
+}
+
+h2 {
+  font-size: 46px;
+  display: block;
+  text-align: left;
+  width: 100%;
+  margin: 1em;
+
+  &.page-header {
+    text-transform: uppercase;
+    padding: 20px;
+    margin: 5% 0 0;
+    //margin-left: 20px;
+    border-left: 2px solid $black;
+    @include mobile {
+      font-size: 30px;
+    }
+  }
+}
+
+h3 {
+  font-size: 36px;
+}
+
+h4 {
+  font-size: 26px;
+}
+
+p {
+  font-size: 16px;
+  line-height: 1.4;
+  text-align: left;
+  margin-bottom: 0.5em;
+}

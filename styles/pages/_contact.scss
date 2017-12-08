@@ -1,0 +1,124 @@
+#section4{
+	@include mobile {
+		padding-bottom: 0;
+	}
+	.container--contact {
+		display: flex;
+		justify-content: space-between;
+		.contact-content {
+			display:flex;
+			flex-flow: row wrap;
+			margin:2em 0;
+			.contact-block{
+				display:block;
+				width: 50%;
+				
+				&.contact-info {
+					
+					padding: 0 2em 0 0;
+					@include tablet {
+						width:100%;
+						padding:0;
+					}
+					@include mobile {
+						width:100%;
+						padding: 0;
+					}
+					a{
+						display:block;
+						
+						margin: 0 0 2em;
+						text-decoration: none;
+						position: relative;
+						transition: all 0.33s ease;
+						&:hover{
+							.fa{
+								top: -5px;
+							}
+							p{
+								color: $teal;
+							}
+						}
+						.fa{
+							margin-right: 1em;
+							color: $teal;
+							position: absolute;
+							transition: all 0.33s ease;
+
+						}
+						.fa-mobile {
+							font-size: 36px;
+							top:0;
+							left:5px;
+						}
+						.fa-envelope-o {
+							font-size: 28px;
+							top:0;
+							left:0;
+						}
+						.fa-map-marker{
+							font-size: 34px;
+							top:0;
+							left:4px;
+						}
+						p {
+							display: block;
+							padding-left:3em;
+							font-size: 22px;
+							transition: all 0.33s ease;
+							color: $black;
+							@include mobile {
+								font-size: 16px;
+							}
+						}
+					}
+					.contact-quote{
+						font-size: 26px;
+						font-style: italic;
+						margin-top: 3em;
+						padding: 1.5em 1em;
+						border-top: 2px solid $black;
+						border-bottom: 2px solid $black;
+						line-height: 1.33;
+						
+						@include mobile {
+							font-size: 22px;
+							padding: 1em 0.5em;
+							margin: 2em 0;
+						}
+					}
+				}
+				&.contact-map {
+					@include tablet {
+						width:100%;
+					}
+					@include mobile {
+						width:100%;
+					}
+				}
+			}
+		}
+	}
+	footer {
+		
+		display:block;
+		width:100%;
+		max-height: 50px;
+		p{
+			color: rgba($black,0.5);
+		}
+		@include mobile {
+			p{
+				text-align: center;
+				margin:1em 0 1.5em;
+			}
+		}
+		span{
+			@include mobile{
+				display: block;
+				width:100%;
+			}
+		}
+
+	}
+}
